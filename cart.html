@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご注文手続き — LUMEA SHIFT 定期購入</title>
+<meta name="description" content="LUMEA SHIFT 定期購入のご注文手続きページです。">
+<!-- 購入ページは検索結果に出す必要がないため noindex -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- ▼▼ OGP（LINE/Slack等でURL共有時のプレビュー用。公開URL確定後、https://lumea-shift.jp/ を実際のURLに置換してください） ▼▼ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LUMEA SHIFT">
+<meta property="og:title" content="ご注文手続き — LUMEA SHIFT 定期購入">
+<meta property="og:description" content="LUMEA SHIFT 定期購入のご注文手続きページです。">
+<meta property="og:url" content="https://lumea-shift.jp/cart.html">
+<meta property="og:image" content="https://lumea-shift.jp/images/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<!-- ▲▲ OGP ここまで ▲▲ -->
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#F5F5F5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cart-body">
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">LUMEA SHIFT</a>
+  <a href="index.html" class="cart-back">← 商品ページに戻る</a>
+</nav>
+
+<!-- ===== デモ注記 ===== -->
+<div class="demo-banner">これはデモ用の架空ページです。実際の注文・決済は行われません。</div>
+
+<main class="cart-main">
+
+  <!-- ===== 注文フォーム ===== -->
+  <section class="cart-section" id="order-form-section">
+    <span class="sec-label">Order</span>
+    <h1 class="cart-h">ご注文手続き</h1>
+
+    <div class="cart-grid">
+
+      <!-- 左: 入力フォーム -->
+      <form class="cart-form" id="order-form" novalidate>
+
+        <h2 class="cart-form-h">お届け先情報</h2>
+
+        <div class="form-row form-row-2">
+          <div class="form-field">
+            <label for="name">お名前 <span class="req">必須</span></label>
+            <input type="text" id="name" name="name" placeholder="山田 花子" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="kana">フリガナ <span class="req">必須</span></label>
+            <input type="text" id="kana" name="kana" placeholder="ヤマダ ハナコ" required>
+          </div>
+        </div>
+
+        <div class="form-row form-row-2">
+          <div class="form-field">
+            <label for="zip">郵便番号 <span class="req">必須</span></label>
+            <input type="text" id="zip" name="zip" placeholder="150-0001" autocomplete="postal-code" inputmode="numeric" required>
+          </div>
+          <div class="form-field">
+            <label for="pref">都道府県 <span class="req">必須</span></label>
+            <select id="pref" name="pref" required>
+              <option value="">選択してください</option>
+              <option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option>
+              <option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option>
+              <option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option>
+              <option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option>
+              <option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option>
+              <option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option>
+              <option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option>
+              <option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option>
+              <option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option>
+              <option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option>
+              <option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option>
+              <option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="address">市区町村・番地 <span class="req">必須</span></label>
+          <input type="text" id="address" name="address" placeholder="渋谷区神宮前3-10-5" autocomplete="street-address" required>
+        </div>
+
+        <div class="form-field">
+          <label for="building">建物名・部屋番号</label>
+          <input type="text" id="building" name="building" placeholder="LUMEAマンション 401号室">
+        </div>
+
+        <div class="form-row form-row-2">
+          <div class="form-field">
+            <label for="tel">電話番号 <span class="req">必須</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="090-1234-5678" autocomplete="tel" required>
+          </div>
+          <div class="form-field">
+            <label for="email">メールアドレス <span class="req">必須</span></label>
+            <input type="email" id="email" name="email" placeholder="example@lumea.jp" autocomplete="email" required>
+          </div>
+        </div>
+
+        <h2 class="cart-form-h">お届けサイクル</h2>
+        <div class="form-field">
+          <label for="cycle">お届け間隔</label>
+          <select id="cycle" name="cycle">
+            <option>30日ごと（推奨）</option>
+            <option>45日ごと</option>
+            <option>60日ごと</option>
+          </select>
+          <p class="form-hint">2回目以降のお届け間隔です。マイページからいつでも変更できます。</p>
+        </div>
+
+        <h2 class="cart-form-h">お支払い方法</h2>
+        <div class="pay-options">
+          <label class="pay-option">
+            <input type="radio" name="payment" value="credit" checked>
+            <span>クレジットカード</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="cvs">
+            <span>コンビニ後払い（手数料 ¥209）</span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="cod">
+            <span>代金引換（手数料 ¥330）</span>
+          </label>
+        </div>
+
+        <div class="card-fields" id="card-fields">
+          <p class="demo-inline-note">※ デモページのため、カード情報は入力しないでください。</p>
+          <div class="form-field">
+            <label for="card-number">カード番号</label>
+            <input type="text" id="card-number" inputmode="numeric" placeholder="0000 0000 0000 0000" disabled>
+          </div>
+          <div class="form-row form-row-2">
+            <div class="form-field">
+              <label for="card-exp">有効期限</label>
+              <input type="text" id="card-exp" placeholder="MM / YY" disabled>
+            </div>
+            <div class="form-field">
+              <label for="card-cvc">セキュリティコード</label>
+              <input type="text" id="card-cvc" placeholder="123" disabled>
+            </div>
+          </div>
+        </div>
+
+        <label class="agree-row">
+          <input type="checkbox" id="agree" required>
+          <span><a href="law.html">特定商取引法に基づく表記</a>・<a href="privacy.html">プライバシーポリシー</a>に同意する <span class="req">必須</span></span>
+        </label>
+
+        <button type="submit" class="btn-purchase">注文を確定する（デモ）</button>
+        <p class="pricing-note pricing-note-spaced">※ 回数縛りはありません。次回発送の5日前までの連絡でいつでも解約できます。</p>
+      </form>
+
+      <!-- 右: 注文内容 -->
+      <aside class="order-summary">
+        <h2 class="cart-form-h">ご注文内容</h2>
+        <div class="summary-product">
+          <img src="images/product_main.jpg" alt="LUMEA SHIFT オールインワン保湿美容液" loading="lazy">
+          <div>
+            <p class="summary-name">LUMEA SHIFT</p>
+            <p class="summary-desc">朝夜兼用オールインワン保湿美容液<br>50mL（約1ヶ月分）</p>
+            <p class="summary-plan">定期購入 — 初回特別価格</p>
+          </div>
+        </div>
+        <dl class="summary-table">
+          <div><dt>商品代金（初回）</dt><dd>¥1,980</dd></div>
+          <div><dt>送料</dt><dd>無料</dd></div>
+          <div class="summary-total"><dt>合計（税込）</dt><dd>¥1,980</dd></div>
+        </dl>
+        <ul class="summary-notes">
+          <li>2回目以降：¥3,480（税込）＋送料¥550</li>
+          <li>回数縛りなし・いつでも解約OK</li>
+          <li>次回発送の5日前までにご連絡ください</li>
+        </ul>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ===== 完了画面（初期非表示） ===== -->
+  <section class="cart-section cart-complete" id="complete-section" hidden>
+    <span class="sec-label">Thank you</span>
+    <h2 class="cart-h">ご注文ありがとうございます。</h2>
+    <p class="complete-text">
+      ご注文を受け付けました（デモ表示です。実際の注文は行われていません）。<br>
+      確認メールをお送りしましたので、内容をご確認ください。
+    </p>
+    <div class="complete-box">
+      <p class="complete-order-label">ご注文番号</p>
+      <p class="complete-order-num" id="order-num">LS-00000000</p>
+    </div>
+    <a href="index.html" class="btn-purchase complete-back">商品ページに戻る</a>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-logo">LUMEA SHIFT</div>
+  <p class="footer-info">
+    LUMEA BEAUTY株式会社<br>
+    〒150-0001 東京都渋谷区神宮前3-10-5 LUMEA BLDG 4F<br>
+    support@lumea-beauty.jp<br>
+    平日 10:00〜18:00（土日祝休み）
+  </p>
+  <nav class="footer-links" aria-label="サイト情報">
+    <a href="law.html">特定商取引法に基づく表記</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+  <p class="footer-disc">※本ページはデモ用の架空ページです。</p>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>
